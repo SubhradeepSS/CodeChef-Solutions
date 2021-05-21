@@ -3,27 +3,26 @@
 int main()
 {
     char str[100];
-    char* ptr;
-    int cntV,cntC;
+    char *ptr;
+    int cntV, cntC;
     gets(str);
-     
+
     //assign address of str to ptr
-    ptr=&str;
-     
-    cntV=0;
-    cntC=0;
-    while(*ptr!='\0')
+    ptr = &str;
+
+    cntV = 0;
+    cntC = 0;
+    while (*ptr != '\0')
     {
-        if(*ptr=='A' ||*ptr=='E' ||*ptr=='I' ||*ptr=='O' ||*ptr=='U' ||*ptr=='a' ||*ptr=='e' ||*ptr=='i' 
-||*ptr=='o' ||*ptr=='u')
+        if (*ptr == 'A' || *ptr == 'E' || *ptr == 'I' || *ptr == 'O' || *ptr == 'U' || *ptr == 'a' || *ptr == 'e' || *ptr == 'i' || *ptr == 'o' || *ptr == 'u')
             cntV++;
         else
             cntC++;
         //increase the pointer, to point next character
         ptr++;
     }
-ptr--;
-     
-    printf("Total number of VOWELS: %d, CONSONANT: %d\n",cntV,cntC);        
+    ptr--;
+
+    printf("Total number of VOWELS: %d, CONSONANT: %d\n", cntV, cntC);
     return 0;
 }

@@ -1,18 +1,21 @@
 #include <iostream>
 using namespace std;
 
-int main() {
+int main()
+{
 	// your code goes here
 	int a[7];
-	for(int i=0;i<7;i++){
-	    cin>>a[i];
+	for (int i = 0; i < 7; i++)
+	{
+		cin >> a[i];
 	}
 	int x;
-	int ans=0;
-	for(int i=0;i<7;i++){
-	    cin>>x;
-	    ans+=abs(x-a[i]);
+	int ans = 0;
+	for (int i = 0; i < 7; i++)
+	{
+		cin >> x;
+		ans += abs(x - a[i]);
 	}
-	cout<<ans;
+	cout << ans;
 	return 0;
 }

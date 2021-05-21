@@ -1,7 +1,7 @@
 #include <stdio.h>
 
-// Declare a global structure since we need to pass 
-// it to a function 
+// Declare a global structure since we need to pass
+// it to a function
 struct exam
 {
     int roll;
@@ -12,7 +12,7 @@ struct exam
 // array of structure object
 struct exam obj[2];
 
- // declaration of the function
+// declaration of the function
 void structfun(struct exam *obj);
 
 // function to print structure elements switch
@@ -20,16 +20,16 @@ void structfun(struct exam *obj);
 void structfun(struct exam *obj)
 {
     //Values using the object 1
-    printf("Name is : %s",obj[0].name);
-    printf("\nRoll No. is : %d",obj[0].roll);
-    printf("\nMarks are : %d",obj[0].marks);
-    
+    printf("Name is : %s", obj[0].name);
+    printf("\nRoll No. is : %d", obj[0].roll);
+    printf("\nMarks are : %d", obj[0].marks);
+
     printf("\n");
-    
+
     // Values using the object 2
-    printf("\nName is : %s",obj[1].name);
-    printf("\nRoll No. is : %d",obj[1].roll);
-    printf("\nMarks are : %d",obj[1].marks);
+    printf("\nName is : %s", obj[1].name);
+    printf("\nRoll No. is : %d", obj[1].roll);
+    printf("\nMarks are : %d", obj[1].marks);
 }
 
 // main function
@@ -37,17 +37,17 @@ int main()
 {
     // assign values using the object 1
     //obj.obj;
-    scanf("%d",&obj[0].marks);
-    scanf("%d",&obj[0].roll);
-    scanf("%[^\n]%*c",obj[0].name);
-	
+    scanf("%d", &obj[0].marks);
+    scanf("%d", &obj[0].roll);
+    scanf("%[^\n]%*c", obj[0].name);
+
     // assign values using the object 1
-    scanf("%d",&obj[1].marks);
-    scanf("%d",&obj[1].roll);
-    scanf("%[^\n]%*c",obj[1].name);
-    
+    scanf("%d", &obj[1].marks);
+    scanf("%d", &obj[1].roll);
+    scanf("%[^\n]%*c", obj[1].name);
+
     // Passing structure to Function
     structfun(obj);
-	
+
     return 0;
 }
