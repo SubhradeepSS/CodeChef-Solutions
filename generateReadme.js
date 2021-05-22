@@ -1,5 +1,5 @@
 const fs = require('fs')
-const ignore_files = ['.git', '.gitignore', '.vscode', 'README.md', 'generateReadme.js']
+const ignore_files = ['.git', '.gitignore', '.vscode', 'README.md', 'generateReadme.js', 'DSA Series']
 const codechef_url = "https://www.codechef.com"
 const repo_url = "https://github.com/SubhradeepSS/CodeChef-Solutions/tree/master"
 
