@@ -1,16 +1,14 @@
 #include <iostream>
 using namespace std;
 
-int main()
-{
+int main() {
 	// your code goes here
 	int t;
-	cin >> t;
-	while (t--)
-	{
-		int n, m;
-		cin >> n >> m;
-		cout << n / m << endl;
+	cin>>t;
+	while(t--){
+	    int n,m;
+	    cin>>n>>m;
+	    cout<<n/m<<endl;
 	}
 	return 0;
 }

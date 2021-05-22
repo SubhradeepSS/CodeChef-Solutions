@@ -1,28 +1,24 @@
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
 using namespace std;
 
-int main()
-{
+int main() {
 	// your code goes here
 	int t;
-	cin >> t;
-	while (t--)
-	{
-		srand(time(NULL));
-		int n, m, k;
-		cin >> n >> m >> k;
-		int a[n][k];
-		int ans[n];
-		vector<int> v(m, 0);
-		for (int i = 0; i < n; i++)
-		{
-			//ans[i]=0;
-			for (int j = 0; j < k; j++)
-			{
-				cin >> a[i][j];
-				//v[a[i][j]-1]++;
-			}
-		} /*
+	cin>>t;
+	while(t--){
+	    srand(time(NULL));
+	    int n,m,k;
+	    cin>>n>>m>>k;
+	    int a[n][k];
+	    int ans[n];
+	    vector<int> v(m,0);
+	    for(int i=0;i<n;i++){
+	        //ans[i]=0;
+	        for(int j=0;j<k;j++){
+	            cin>>a[i][j];
+	            //v[a[i][j]-1]++;
+	        }
+	        }/*
 	        int f=0;
 	        for(int k=0;k<m;k++)
 	            {if(v[k]!=1)
@@ -40,9 +36,9 @@ int main()
 	            if(ans[i]==0)
 	                ans[i]=rand()%m+1;
 	        }*/
-		for (int i = 0; i < n; i++)
-			cout << rand() % m + 1 << " ";
-		cout << endl;
+	        for(int i=0;i<n;i++)
+	            cout<<rand()%m+1<<" ";
+	       cout<<endl;
 	}
 	return 0;
 }
