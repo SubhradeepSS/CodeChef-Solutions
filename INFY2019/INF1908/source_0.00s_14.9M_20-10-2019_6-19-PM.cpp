@@ -8,7 +8,7 @@ int main() {
 	while(t--){
 	cin>>n>>k;
 	int a=n/10;
-	cout<<a*10+(k+n)<<endl;
+	cout<<a*10+(k+n%10)%10<<endl;
 	}
 	return 0;
 }

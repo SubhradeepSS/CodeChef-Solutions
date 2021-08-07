@@ -1,0 +1,21 @@
+name: Compilation / Interpretation Test
+
+on: [push, pull_request]
+
+jobs:
+  compile:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Install g++
+        run: sudo apt-get install g++
+      - name: Test - Compilation of all cpp files
+        run: ./cpp-compile.sh
+      - name: Setup Java
+        uses: actions/setup-java@v2
+          with:
+            distribution: 'adopt'
+            java-version: '11'
+      - name: Test - Compilation of all java files
+        run: ./java-compile.sh

@@ -13,6 +13,7 @@ bool f(ll n,ll m,ll x,ll y){
     }
     if(a%x==1&&b%y==0)
         return (y==1&&b>0);
+	return false;
 }
 
 int main() {
