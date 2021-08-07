@@ -1,0 +1,14 @@
+name: C Compilation Test
+
+on: [push, pull_request]
+
+jobs:
+  compile:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Install g++
+        run: sudo apt-get install g++
+      - name: Test - Compilation of all c files
+        run: ./c-compile.sh

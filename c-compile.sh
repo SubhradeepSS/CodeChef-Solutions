@@ -14,17 +14,19 @@ then
 fi
 
 
-JAVA_FILES=`find $CHECK_DIR -name '*.java'`
+C_FILES=`find $CHECK_DIR -name '*.c'`
+TEST_PROG_FILE=`head /dev/urandom | tr -dc A-Za-z0-9 | head -c 10 ; echo ''`
 
 TEST_EXIT_STATUS=0
 
-echo "Checking if all Java files compile successfully"
+echo "Checking if all C files compile successfully"
 
-for path in $JAVA_FILES
+for path in $C_FILES
 do
     {
-        javac $path && 
-        echo "$path: ✅"
+        g++ -o $TEST_PROG_FILE $path && 
+        echo "$path: ✅" &&
+        rm $TEST_PROG_FILE
     } ||
     {
         echo "$path: ❌" &&
@@ -33,11 +35,7 @@ do
     }
 done
 
-find . -name "Codechef.class" -delete
-
 
 unset IFS; set +f
 
 exit $TEST_EXIT_STATUS
-
-

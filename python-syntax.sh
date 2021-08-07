@@ -14,16 +14,16 @@ then
 fi
 
 
-JAVA_FILES=`find $CHECK_DIR -name '*.java'`
+PYTHON_FILES=`find $CHECK_DIR -name '*.py'`
 
 TEST_EXIT_STATUS=0
 
-echo "Checking if all Java files compile successfully"
+echo "Checking for syntax errors in all Python files"
 
-for path in $JAVA_FILES
+for path in $PYTHON_FILES
 do
     {
-        javac $path && 
+        python -m py_compile $path && 
         echo "$path: ✅"
     } ||
     {
@@ -33,11 +33,8 @@ do
     }
 done
 
-find . -name "Codechef.class" -delete
-
+find . | grep -E "(__pycache__|\.pyc|\.pyo$)" | xargs rm -rf
 
 unset IFS; set +f
 
 exit $TEST_EXIT_STATUS
-
-

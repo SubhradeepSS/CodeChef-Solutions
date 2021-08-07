@@ -1,4 +1,4 @@
-name: Compilation / Interpretation Test
+name: C++ Compilation Test
 
 on: [push, pull_request]
 
@@ -12,10 +12,3 @@ jobs:
         run: sudo apt-get install g++
       - name: Test - Compilation of all cpp files
         run: ./cpp-compile.sh
-      - name: Setup Java
-        uses: actions/setup-java@v2
-          with:
-            distribution: 'adopt'
-            java-version: '11'
-      - name: Test - Compilation of all java files
-        run: ./java-compile.sh

@@ -11,13 +11,13 @@ for _ in range(t):
                 a=i
                 break
     util=n
-    b=util
+    b=util%10
     util//=10
     pos=1
     i=2
     while util>0:
-        if util>b:
-            b=util
+        if util%10>b:
+            b=util%10
             pos=i
         i+=1
         util=util//10

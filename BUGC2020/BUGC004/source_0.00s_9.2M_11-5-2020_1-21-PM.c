@@ -2,7 +2,7 @@
 #include <string.h>
 int main()
 {
-    char str[100];
+    /* char str[100];
     char* ptr;
     int cntV,cntC;
     gets(str);
@@ -24,6 +24,8 @@ int main()
     }
 ptr--;
      
-    printf("Total number of VOWELS: %d, CONSONANT: %d\n",cntV,cntC);        
+    printf("Total number of VOWELS: %d, CONSONANT: %d\n",cntV,cntC); */        
     return 0;
 }
+
+// this was a debug contest and not coding => some errors popping out in compilings

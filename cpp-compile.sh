@@ -19,7 +19,7 @@ TEST_PROG_FILE=`head /dev/urandom | tr -dc A-Za-z0-9 | head -c 10 ; echo ''`
 
 TEST_EXIT_STATUS=0
 
-echo "Checking if all cpp files compile successfully"
+echo "Checking if all C++ files compile successfully"
 
 for path in $CPP_FILES
 do
