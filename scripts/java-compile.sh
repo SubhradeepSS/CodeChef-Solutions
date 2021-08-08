@@ -2,7 +2,7 @@
 set -f
 IFS=$'\n';
 
-CHECK_DIR=`./`
+CHECK_DIR=`../`
 
 if [ $# == 1 ]
 then

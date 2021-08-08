@@ -9,4 +9,4 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Test - Syntax check of all py files
-        run: ./python-syntax.sh
+        run: ./scripts/python-syntax.sh

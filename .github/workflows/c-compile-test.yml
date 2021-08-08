@@ -11,4 +11,4 @@ jobs:
       - name: Install g++
         run: sudo apt-get install g++
       - name: Test - Compilation of all c files
-        run: ./c-compile.sh
+        run: ./scripts/c-compile.sh

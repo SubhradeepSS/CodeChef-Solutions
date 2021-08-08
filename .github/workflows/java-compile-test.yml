@@ -14,4 +14,4 @@ jobs:
           distribution: 'adopt'
           java-version: '11'
       - name: Test - Compilation of all java files
-        run: ./java-compile.sh
+        run: ./scripts/java-compile.sh

@@ -2,7 +2,7 @@
 set -f
 IFS=$'\n';
 
-CHECK_DIR=`./`
+CHECK_DIR=`../`
 
 if [ $# == 1 ]
 then
@@ -14,19 +14,17 @@ then
 fi
 
 
-CPP_FILES=`find $CHECK_DIR -name '*.cpp'`
-TEST_PROG_FILE=`head /dev/urandom | tr -dc A-Za-z0-9 | head -c 10 ; echo ''`
+PYTHON_FILES=`find $CHECK_DIR -name '*.py'`
 
 TEST_EXIT_STATUS=0
 
-echo "Checking if all C++ files compile successfully"
+echo "Checking for syntax errors in all Python files"
 
-for path in $CPP_FILES
+for path in $PYTHON_FILES
 do
     {
-        g++ -o $TEST_PROG_FILE $path && 
-        echo "$path: ✅" &&
-        rm $TEST_PROG_FILE
+        python -m py_compile $path && 
+        echo "$path: ✅"
     } ||
     {
         echo "$path: ❌" &&
@@ -35,6 +33,7 @@ do
     }
 done
 
+find . | grep -E "(__pycache__|\.pyc|\.pyo$)" | xargs rm -rf
 
 unset IFS; set +f
 
